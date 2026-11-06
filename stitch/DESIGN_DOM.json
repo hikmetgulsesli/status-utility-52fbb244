@@ -1,0 +1,150 @@
+{
+  "generatedAt": "2026-11-06T17:51:12.567Z",
+  "screenCount": 1,
+  "screens": {
+    "4dfc3a3696554e1489bd57da3aba42ff": {
+      "screenId": "4dfc3a3696554e1489bd57da3aba42ff",
+      "materialSymbolsRequired": false,
+      "sections": [
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "max-w-4xl",
+            "mx-auto",
+            "w-full",
+            "flex",
+            "items-center",
+            "justify-between",
+            "pb-8",
+            "border-b",
+            "border-slate-200"
+          ],
+          "childCount": 4
+        },
+        {
+          "tag": "main",
+          "layout": "block",
+          "classes": [
+            "max-w-4xl",
+            "mx-auto",
+            "w-full",
+            "my-8"
+          ],
+          "childCount": 25
+        },
+        {
+          "tag": "footer",
+          "layout": "flex-row",
+          "classes": [
+            "max-w-4xl",
+            "mx-auto",
+            "w-full",
+            "pt-8",
+            "border-t",
+            "border-slate-200",
+            "flex",
+            "items-center",
+            "justify-between",
+            "text-xs"
+          ],
+          "childCount": 2
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Refresh Status",
+          "classes": [
+            "inline-flex",
+            "items-center",
+            "px-5",
+            "py-2.5",
+            "bg-emerald-600",
+            "hover:bg-emerald-700",
+            "text-white",
+            "text-sm",
+            "font-medium",
+            "rounded-lg",
+            "shadow-sm",
+            "focus:outline-none",
+            "focus:ring-2",
+            "focus:ring-offset-2",
+            "focus:ring-emerald-500",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Status Utility &#x00A9; 2025",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "All systems functioning normally",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [],
+      "navLinks": [],
+      "cards": [],
+      "icons": [],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {},
+      "fonts": [],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "6"
+      },
+      "behaviorContract": [
+        {
+          "kind": "button",
+          "label": "Refresh Status",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Status Utility &#x00A9; 2025",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "All systems functioning normally",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "Status Utility &#x00A9; 2025",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "All systems functioning normally",
+          "icon": null,
+          "active": false
+        }
+      ],
+      "title": "Status Page - Status Utility"
+    }
+  }
+}
