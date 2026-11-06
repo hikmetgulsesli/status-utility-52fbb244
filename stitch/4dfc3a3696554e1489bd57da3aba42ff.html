@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Status Page - Status Utility</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col font-sans">
+  <div data-surface-id="SURF_STATUS_PAGE" class="flex-1 flex flex-col justify-between p-6 md:p-12">
+    <!-- Header -->
+    <header class="max-w-4xl mx-auto w-full flex items-center justify-between pb-8 border-b border-slate-200">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-lg bg-emerald-600 flex items-center justify-center text-white font-bold text-lg shadow-sm">
+          SU
+        </div>
+        <div>
+          <h1 class="text-xl font-bold tracking-tight text-slate-900">Status Utility</h1>
+          <p class="text-xs text-slate-500 font-medium">System Monitoring &amp; State Diagnostics</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-2">
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800 border border-emerald-200">
+          <span class="w-2 h-2 mr-1.5 rounded-full bg-emerald-500"></span>
+          System Online
+        </span>
+        <span class="text-xs font-mono bg-slate-100 text-slate-600 px-2 py-1 rounded border border-slate-200">
+          /status
+        </span>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-4xl mx-auto w-full my-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Main Status Card -->
+        <div class="md:col-span-2 bg-white rounded-xl border border-slate-200 shadow-sm p-6 space-y-6">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+            <div>
+              <h2 class="text-lg font-semibold text-slate-900">Current System State</h2>
+              <p class="text-sm text-slate-500">Real-time status diagnostics for the utility service</p>
+            </div>
+            <div class="flex items-center space-x-1.5 px-2.5 py-1 bg-emerald-50 text-emerald-700 text-xs font-semibold rounded-md border border-emerald-100">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              <span>Operational</span>
+            </div>
+          </div>
+
+          <!-- Status Message Section -->
+          <div class="bg-slate-50 rounded-lg p-5 border border-slate-100">
+            <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">
+              Status Message
+            </div>
+            <div class="text-base font-medium text-slate-900">
+              Status refreshed
+            </div>
+          </div>
+
+          <!-- State Details Grid -->
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-slate-50 rounded-lg p-4 border border-slate-100">
+              <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">
+                State Value
+              </div>
+              <div class="inline-flex items-center px-2.5 py-1 rounded bg-emerald-50 text-emerald-700 border border-emerald-200 font-mono text-sm font-semibold">
+                refreshed
+              </div>
+            </div>
+
+            <div class="bg-slate-50 rounded-lg p-4 border border-slate-100">
+              <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">
+                Active Route
+              </div>
+              <div class="inline-flex items-center px-2.5 py-1 rounded bg-slate-100 text-slate-700 border border-slate-200 font-mono text-sm font-medium">
+                /status
+              </div>
+            </div>
+          </div>
+
+          <!-- Primary Control Area -->
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <p class="text-xs text-slate-400">
+              Click refresh to re-evaluate system state and synchronize storage.
+            </p>
+            <button type="button" data-action="ACT_REFRESH_STATUS" data-control-slot="CSLOT_REFRESH_STATUS_REFRESH_BUTTON" class="inline-flex items-center px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-colors">
+              Refresh Status
+            </button>
+          </div>
+        </div>
+
+        <!-- Sidebar / Metadata -->
+        <div class="space-y-6">
+          <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 space-y-4">
+            <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">
+              Diagnostic Information
+            </h3>
+            <div class="space-y-3 text-sm">
+              <div class="flex justify-between items-center py-1 border-b border-slate-100">
+                <span class="text-slate-500">Environment</span>
+                <span class="font-mono text-xs text-slate-700">Production</span>
+              </div>
+              <div class="flex justify-between items-center py-1 border-b border-slate-100">
+                <span class="text-slate-500">Storage Sync</span>
+                <span class="text-xs font-medium text-emerald-600">Active</span>
+              </div>
+              <div class="flex justify-between items-center py-1 border-b border-slate-100">
+                <span class="text-slate-500">Route Verification</span>
+                <span class="font-mono text-xs text-slate-700">/status</span>
+              </div>
+              <div class="flex justify-between items-center py-1">
+                <span class="text-slate-500">Target Endpoint</span>
+                <span class="font-mono text-xs text-slate-700">TARGET_STATUS_PAGE</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-5 text-xs text-slate-500 space-y-2">
+            <div class="font-semibold text-slate-700 uppercase tracking-wider text-[11px]">Notice</div>
+            <p class="leading-relaxed">
+              Status records are kept synchronised with local storage across browser reloads.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-4xl mx-auto w-full pt-8 border-t border-slate-200 flex items-center justify-between text-xs text-slate-400">
+      <div>Status Utility &#x00A9; 2025</div>
+      <div>All systems functioning normally</div>
+    </footer>
+  </div>
+</body>
+</html>
